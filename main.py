@@ -40,10 +40,9 @@ def main(reset_volume: bool) -> None:
         # If a hand is visible, process hand landmarks
         if lm_positions:
             # Landmark 4: Thumb tip; Landmark 8: Index finger tip
-
+            
             x1, y1 = lm_positions[4][1:3]
             x2, y2 = lm_positions[8][1:3]
-            
             length = math.hypot(x2 - x1, y2 - y1)
 
             # Draw circles and a line between thumb and index finger
